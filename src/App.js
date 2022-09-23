@@ -1,17 +1,38 @@
 import './App.css';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const testUrl = 'https://botw-compendium.herokuapp.com/api/v2/entry/moblin'
+const testUrl = 'https://botw-compendium.herokuapp.com/api/v2/category/monsters'
 
-axios.get(testUrl).then((response) => {
-  console.log(response.data)
-})
+
 
 function App() {
+
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    axios.get(testUrl).then((response) => {
+      setData(response.data.data)
+    })
+  }, [])
+
+  console.log(data)
+
+  if(!data) <p>Loading...</p>
+
   return (
     <div className="App">
-      <h1 className='text-3xl'>Hello World</h1>
+      {data?.map((d) => {
+        return (
+          <div>
+            <h1 className='capitalize'>{d.name}</h1>
+            <img src={d.image} alt={d.name}/>
+            <p>{d.description}</p>
+            <p>{d.common_locations}</p>
+            <p>{d.drops}</p>
+          </div>
+        )
+      })}
     </div>
   );
 }
