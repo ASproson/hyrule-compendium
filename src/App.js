@@ -5,7 +5,6 @@ import slate from "./assets/SheikahSlateUpscale.png";
 import square from "./assets/square.png";
 import { MdOutlinePlayArrow } from "react-icons/md";
 
-
 const data = [
   {
     category: "monsters",
@@ -47,16 +46,14 @@ const data = [
   },
   {
     category: "monsters",
-    common_locations: [
-      "Divine Beast Vah Ruta"
-    ],
-    description: "This phantom of Ganon attacked the Divine Beast Vah Ruta and was responsible for the demise of the Champion Mipha. It attacks with a spear and ice magic.",
-    drops: [
-      
-    ],
+    common_locations: ["Divine Beast Vah Ruta"],
+    description:
+      "This phantom of Ganon attacked the Divine Beast Vah Ruta and was responsible for the demise of the Champion Mipha. It attacks with a spear and ice magic.",
+    drops: [],
     id: 161,
-    image: "https://botw-compendium.herokuapp.com/api/v2/entry/waterblight_ganon/image",
-    name: "waterblight ganon"
+    image:
+      "https://botw-compendium.herokuapp.com/api/v2/entry/waterblight_ganon/image",
+    name: "waterblight ganon",
   },
 ];
 
@@ -89,6 +86,10 @@ function App() {
       counter = data.length - 1;
     }
     setIdx(counter);
+  };
+
+  const handleItemClick = () => {
+    console.log("clicked!");
   };
 
   if (!data) return <p>Loading...</p>;
@@ -155,6 +156,7 @@ function App() {
                           return (
                             <div
                               key={drops}
+                              onClick={handleItemClick}
                               className="text-white text-sm bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-3 cursor-pointer -ml-[190px] transition hover:scale-110 ease-in-out"
                             >
                               {drops}
@@ -166,27 +168,22 @@ function App() {
                   </div>
                 </div>
               </div>
-
             </div>
 
-
-              {/* Carousel buttons */}
-              <div className="absolute mt-[237px] ml-[140px] w-[800px] flex justify-between">
-                <div className="">
-                  <button onClick={handleClickBackward}>
-                    <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 rotate-180 transition hover:scale-125 ease-in-out" />
-                  </button>
-                </div>
-
-                <div className="">
-                  <button onClick={handleClickForward}>
-                    <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 transition hover:scale-125 ease-in-out" />
-                  </button>
-                </div>
+            {/* Carousel buttons */}
+            <div className="absolute mt-[237px] ml-[140px] w-[800px] flex justify-between">
+              <div className="">
+                <button onClick={handleClickBackward}>
+                  <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 rotate-180 transition hover:scale-125 ease-in-out" />
+                </button>
               </div>
 
-
-              
+              <div className="">
+                <button onClick={handleClickForward}>
+                  <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 transition hover:scale-125 ease-in-out" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
