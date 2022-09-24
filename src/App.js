@@ -104,7 +104,7 @@ function App() {
     <div className="flex h-screen">
       <Header />
       <div className="m-auto">
-        <div className="">
+        <div className="mt-[100px]">
           <div
             className="flex"
             style={{
