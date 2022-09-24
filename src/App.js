@@ -50,47 +50,43 @@ function App() {
       <div className="flex">
         <div className="m-auto">
           <div
-            className="-mt-20"
+            className="flex mt-[300px]"
             style={{
               backgroundImage: `url(${slate})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
               height: 1000,
               width: 1000,
-              transform: "rotate(-90deg)",
             }}
-          ></div>
-
-          {/* Monster Details */}
-          <div className="-mt-[400px]">
-            <div className="flex ml-[200px]">
-              <img
-                src={data.image}
-                className="rounded-md h-[200px] w-[200px] -mt-4"
-              />
-              <div className="ml-5 -mt-6">
-                <h1 className="capitalize font-bold text-2xl">{data.name}</h1>
-                <div className="w-[440px] mt-2 break-words">
-                  <p className="text-md italic">{data.description}</p>
-                </div>
-                <div className="flex mt-2 text-md">
-                  <h2 className="font-bold">
-                  Common locations:
-
-                  </h2>
-                  {data.common_locations.map((locale) => {
-                    return <p className="ml-2 capitalize">{locale}</p>;
-                  })}
-                </div>
-                <h2 className="font-bold mt-2">Drops:</h2>
-                <div className="flex mt-2 text-md capitalize space-x-6">
-                  {data.drops.map((drops) => {
-                    return (
-                      <p className="text-white text-sm bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-3 cursor-pointer">
-                        {drops}
-                      </p>
-                    );
-                  })}
+          >
+            {/* Monster Details */}
+            <div className="mt-[150px]">
+              <div className="flex ml-[200px]">
+                <img
+                  src={data.image}
+                  className="rounded-md h-[200px] w-[200px] -mt-4"
+                />
+                <div className="ml-5 -mt-6">
+                  <h1 className="capitalize font-bold text-2xl">{data.name}</h1>
+                  <div className="w-[440px] mt-2 break-words">
+                    <p className="text-md italic">{data.description}</p>
+                  </div>
+                  <div className="flex mt-2 text-md">
+                    <h2 className="font-bold">Common locations:</h2>
+                    {data.common_locations.map((locale) => {
+                      return <p className="ml-2 capitalize">{locale}</p>;
+                    })}
+                  </div>
+                  <h2 className="font-bold mt-2">Drops:</h2>
+                  <div className="flex mt-2 text-md capitalize space-x-6">
+                    {data.drops.map((drops) => {
+                      return (
+                        <p className="text-white text-sm bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-3 cursor-pointer">
+                          {drops}
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
