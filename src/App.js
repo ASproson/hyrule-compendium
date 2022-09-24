@@ -7,6 +7,7 @@ import triforce from "./assets/triforce.png";
 import { MdOutlinePlayArrow } from "react-icons/md";
 import Header from "./components/Header";
 import MonsterDetails from "./components/MonsterDetails";
+import Carousel from "./components/Carousel";
 
 const apiUrl = "https://botw-compendium.herokuapp.com/api/v2/category/monsters";
 
@@ -120,19 +121,11 @@ function App() {
             {/* Monster Details */}
             <MonsterDetails data={data} idx={idx} />
 
-            {/* Carousel buttons */}
             <div className="absolute mt-[240px] ml-[140px] w-[800px] flex justify-between">
-              <div className="">
-                <button onClick={handleClickBackward}>
-                  <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 rotate-180 transition hover:scale-125 ease-in-out animate-pulse" />
-                </button>
-              </div>
-
-              <div className="">
-                <button onClick={handleClickForward}>
-                  <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 transition hover:scale-125 ease-in-out animate-pulse" />
-                </button>
-              </div>
+              <Carousel
+                handleClickBackward={handleClickBackward}
+                handleClickForward={handleClickForward}
+              />
             </div>
           </div>
         </div>
