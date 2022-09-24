@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import slate from "./assets/SheikahSlateUpscale.png";
+import square from "./assets/square.png";
+
 
 const testUrl =
   "https://botw-compendium.herokuapp.com/api/v2/category/monsters";
@@ -46,16 +48,16 @@ function App() {
     //   })}
     // </div>
 
-    <div>
-      <div className="flex">
-        <div className="m-auto">
+    <div className="flex h-screen">
+      <div className="m-auto">
+        <div className="">
           <div
-            className="flex mt-[300px]"
+            className="flex"
             style={{
               backgroundImage: `url(${slate})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
-              height: 1000,
+              height: 600,
               width: 1000,
             }}
           >
@@ -92,6 +94,8 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full h-[35px] absolute bottom-0" style={{ backgroundImage: `url(${square})`}}>
       </div>
     </div>
   );
