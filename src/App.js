@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import slate from "./assets/SheikahSlateUpscale.png";
-import triforce from "./assets/triforce.png";
 import Header from "./components/Header";
 import MonsterDetails from "./components/MonsterDetails";
 import Carousel from "./components/Carousel";
