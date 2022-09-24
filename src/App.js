@@ -96,11 +96,6 @@ function App() {
 
   if (!data) return <p>Loading...</p>;
 
-  if (data) {
-    console.log([data.length, idx, counter]);
-    console.log([data[idx].name]);
-  }
-
   return (
     <div className="flex h-screen">
       <Header />
