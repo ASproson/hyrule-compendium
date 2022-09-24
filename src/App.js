@@ -4,6 +4,7 @@ import axios from "axios";
 import slate from "./assets/SheikahSlateUpscale.png";
 import square from "./assets/square.png";
 import { MdOutlinePlayArrow } from "react-icons/md";
+import Header from "./components/Header";
 
 const data = [
   {
@@ -101,6 +102,7 @@ function App() {
 
   return (
     <div className="flex h-screen">
+      <Header />
       <div className="m-auto">
         <div className="">
           <div
