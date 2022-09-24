@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import slate from "./assets/SheikahSlateUpscale.png";
 import triforce from "./assets/triforce.png";
-
-import { MdOutlinePlayArrow } from "react-icons/md";
 import Header from "./components/Header";
 import MonsterDetails from "./components/MonsterDetails";
 import Carousel from "./components/Carousel";
@@ -118,7 +116,6 @@ function App() {
               width: 1000,
             }}
           >
-            {/* Monster Details */}
             <MonsterDetails data={data} idx={idx} />
 
             <div className="absolute mt-[240px] ml-[140px] w-[800px] flex justify-between">
