@@ -6,6 +6,7 @@ import triforce from "./assets/triforce.png";
 import Header from "./components/Header";
 import MonsterDetails from "./components/MonsterDetails";
 import Carousel from "./components/Carousel";
+import Banner from "./components/Banner";
 
 const apiUrl = "https://botw-compendium.herokuapp.com/api/v2/category/monsters";
 
@@ -122,14 +123,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div
-        className="w-full h-[90px] absolute top-0 rotate-180"
-        style={{ backgroundImage: `url(${triforce})` }}
-      ></div>
-      <div
-        className="w-full h-[90px] absolute bottom-0"
-        style={{ backgroundImage: `url(${triforce})` }}
-      ></div>
+      <Banner />
     </div>
   );
 }
