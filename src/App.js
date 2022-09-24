@@ -1,10 +1,11 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import slate from "./assets/SheikahSlateUpscale.png";
 
 const testUrl =
   "https://botw-compendium.herokuapp.com/api/v2/category/monsters";
-const sheikahSlate = require("./assets/SheikahSlateUpscale.png");
+// const sheikahSlate = require("./assets/SheikahSlateUpscale.png")
 
 const data = {
   category: "monsters",
@@ -44,34 +45,44 @@ function App() {
     //     )
     //   })}
     // </div>
-    <div className="h-screen w-screen flex justify-center">
-      <div className="flex justify-center ">
-        <div className="-z-20">
-          <img
-            src={sheikahSlate}
-            alt="sheikah slate"
-            className="-rotate-90 h-[1000px] w-[600px] -z-10"
-          />
 
-          {/* Monster details */}
-          <div className="-mt-[620px] z-40">
-            <div className="flex">
+    <div>
+      <div className="flex">
+        <div className="m-auto">
+          <div
+            className="-mt-20"
+            style={{
+              backgroundImage: `url(${slate})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              height: 1000,
+              width: 1000,
+              transform: "rotate(-90deg)",
+            }}
+          ></div>
+
+          {/* Monster Details */}
+          <div className="-mt-[400px]">
+            <div className="flex ml-[200px]">
               <img
                 src={data.image}
-                className="rounded-md h-[225px] w-[225px] -mt-4"
+                className="rounded-md h-[200px] w-[200px] -mt-4"
               />
               <div className="ml-5 -mt-6">
                 <h1 className="capitalize font-bold text-2xl">{data.name}</h1>
-                <div className="w-[400px] mt-2 break-words">
+                <div className="w-[440px] mt-2 break-words">
                   <p className="text-md italic">{data.description}</p>
                 </div>
                 <div className="flex mt-2 text-md">
+                  <h2 className="font-bold">
                   Common locations:
+
+                  </h2>
                   {data.common_locations.map((locale) => {
                     return <p className="ml-2 capitalize">{locale}</p>;
                   })}
                 </div>
-                <h2 className="font-bold mt-4 text-xl">Drops</h2>
+                <h2 className="font-bold mt-2">Drops:</h2>
                 <div className="flex mt-2 text-md capitalize space-x-6">
                   {data.drops.map((drops) => {
                     return (
