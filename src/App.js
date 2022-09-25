@@ -102,8 +102,6 @@ function App() {
       <Header />
       <div className="m-auto">
         <div className="mt-[110px]">
-
-
           {/* Desktop View */}
           <div className="hidden md:visible md:flex">
             <div
@@ -129,10 +127,8 @@ function App() {
 
           {/* Mobile View */}
           <div className="md:hidden">
-            <MonsterDetailsMobile data={data} idx={idx}/>
+            <MonsterDetailsMobile data={data} idx={idx} />
           </div>
-
-
         </div>
       </div>
       <Banner />
