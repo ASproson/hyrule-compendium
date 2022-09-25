@@ -10,6 +10,7 @@ const MonsterDetailsMobile = ({
 }) => {
   return (
     <div className="border-[4px] border-[#ffcc67] rounded-md ml-6 mr-6 pb-6 pt-6 pl-8 pr-8">
+      <h1 className="font-zelda text-center text-[50px]">Hyrule Compendium</h1>
       <h1 className="capitalize font-bold text-2xl text-center pb-4">
         {data[idx].name}
       </h1>
@@ -52,7 +53,7 @@ const MonsterDetailsMobile = ({
           <p className="ml-2">Unknown</p>
         ) : (
           <div className="flex space-x-6">
-            {data[idx].drops.slice(0, 4).map((drops) => {
+            {data[idx].drops.slice(0, 3).map((drops) => {
               return (
                 <div
                   key={drops}
