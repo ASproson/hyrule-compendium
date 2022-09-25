@@ -1,13 +1,35 @@
-# Notes
+# Hyrule Compendium
 
-> https://botw-compendium.herokuapp.com/api/v2/all get all results
+Hello there! This is a demo project demonstrating my ability to call a freely available web API and display the results in a meaningful and creative way. You can view the [live deployment here](https://asproson.github.io/hyrule-compendium/).
 
-> https://botw-compendium.herokuapp.com/api/v2/entry/123 get a specific entry by id
+This repo makes use of the *Legend of Zelda: Breath of the Wild* [Hyrule Compendium API](https://gadhagod.github.io/Hyrule-Compendium-API/#/), which lists numerous monsters and items within the game.
 
-> https://botw-compendium.herokuapp.com/api/v2/entry/moblin get a specific entry by name
+## Concept
 
-> https://botw-compendium.herokuapp.com/api/v2/entry/190 get a specific material by id
+When playing *Breath of the Wild* you eventually obtain a [Sheikah slate](https://zelda.fandom.com/wiki/Sheikah_Slate), which is a Hyrulian version of a tablet/smartphone. When using this device you can view things such as a world map or recipe catalogue, but it also contains a beastiary that details an individual monster's locations, strengths/weaknesses, and potential items they might drop when defeated. 
 
-> https://botw-compendium.herokuapp.com/api/v2/entry/warm_safflina get a specific material
+Following from this idea I decided to make use of the Hyrule Compendium API and turn that data into an interactive web version of the Sheikah slate. In this project I used:
 
-Home page shows monsters render by default in a card system, material names will be link tos that onClick send params to endpoint and render in a page component
+- React
+- Tailwind CSS
+- Axios
+- Jest
+- React Icons
+- GitHub Pages
+
+## Installation
+
+To run on your local machine please follow the below instructions:
+
+> git clone https://github.com/ASproson/hyrule-compendium.git
+
+> cd hyrule-compendium
+
+> npm install
+
+> npm start
+
+## Next Steps
+
+
+
