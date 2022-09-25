@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "./Carousel";
 import { MdOutlinePlayArrow } from "react-icons/md";
 
 const MonsterDetailsMobile = ({
