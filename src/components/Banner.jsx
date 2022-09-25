@@ -9,7 +9,7 @@ const Banner = () => {
         style={{ backgroundImage: `url(${triforce})` }}
       ></div> */}
       <div
-        className="w-full h-[90px] absolute bottom-0"
+        className="w-full h-[90px] absolute bottom-0 hidden sm:block"
         style={{ backgroundImage: `url(${triforce})` }}
       ></div>
     </div>
