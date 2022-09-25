@@ -19,7 +19,7 @@ const MonsterDetailsMobile = ({ data, idx }) => {
         <p className="text-md italic pb-4">{data[idx].description}</p>
       </div>
 
-      <h2>Common locations:</h2>
+      <h2 className="font-bold">Common locations:</h2>
       <div className="pb-4">
         {data[idx].common_locations === null ? (
           <p className="ml-2">Unknown</p>
