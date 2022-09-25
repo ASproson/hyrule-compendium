@@ -37,7 +37,7 @@ Following from this idea I decided to make use of the Hyrule Compendium API and 
 
 ### Testing/Time Constraints
 
-I set a time limit of 6 hours total for this project and originally wanted to explore the Cypress testing framework, but as I started to run out of time I fell back on Jest, which I'm more familiar with. The Jest are far from exhaustive but I wanted to get at least *some* testing in.
+I set a time limit of 6 hours total for this project and originally wanted to explore the Cypress testing framework, but as I started to run out of time I fell back on Jest, which I'm more familiar with. The tests are far from exhaustive but I wanted to get at least *some* testing in!
 
 ### Assets
 
@@ -50,4 +50,9 @@ The API also had some limitations in terms of primary key/foreign keys. For exam
 ### Code Repetition
 
 There is some code reptition between components as I decided to make a desktop and then a mobile version for certain components. This is because with the amount of styling I was doing on the desktop components it quickly became very difficult to interpret how different styles were impacting each other. As a result I decided to make a split between mobile and desktop for readability. With more time I would have liked to create a more elegant solution and would have likely built more standalone components that could be called inside of page components to be styled, rather than having the styling coupled directly to the page component.
+
+### Design
+
+I'd have also liked to have made use of more assets and design to make it more aesthetically pleasing. I originally tried using a screenshot from the game as a backdrop, then I used a looping video, but it didn't seem to fit and led to a lot of visual clutter so I ended up removing them.
+
 
