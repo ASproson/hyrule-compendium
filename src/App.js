@@ -127,7 +127,12 @@ function App() {
 
           {/* Mobile View */}
           <div className="md:hidden">
-            <MonsterDetailsMobile data={data} idx={idx} />
+            <MonsterDetailsMobile
+              data={data}
+              idx={idx}
+              handleClickBackward={handleClickBackward}
+              handleClickForward={handleClickForward}
+            />
           </div>
         </div>
       </div>
