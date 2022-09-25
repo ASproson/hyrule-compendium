@@ -1,6 +1,13 @@
 import React from "react";
+import Carousel from "./Carousel";
+import { MdOutlinePlayArrow } from "react-icons/md";
 
-const MonsterDetailsMobile = ({ data, idx }) => {
+const MonsterDetailsMobile = ({
+  data,
+  idx,
+  handleClickBackward,
+  handleClickForward,
+}) => {
   return (
     <div className="border-[4px] border-[#ffcc67] rounded-md ml-6 mr-6 pb-6 pt-6 pl-8 pr-8">
       <h1 className="capitalize font-bold text-2xl text-center pb-4">
@@ -13,6 +20,14 @@ const MonsterDetailsMobile = ({ data, idx }) => {
           alt={data[idx].name}
           className="rounded-md h-[200px] w-[200px]"
         />
+        <div className="w-[370px] flex justify-between ml-[100px] mr-[100px] absolute mt-[70px]">
+          <button onClick={handleClickBackward}>
+            <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 rotate-180 transition hover:scale-125 ease-in-out animate-pulse" />
+          </button>
+          <button onClick={handleClickForward}>
+            <MdOutlinePlayArrow className="h-[60px] w-[60px] text-cyan-500 transition hover:scale-125 ease-in-out animate-pulse" />
+          </button>
+        </div>
       </div>
 
       <div className="flex justify-center">
