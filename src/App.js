@@ -95,7 +95,11 @@ function App() {
     setIdx(counter);
   };
 
-  if (!data) return <p>Loading...</p>;
+  if (!data) return (
+      <div>
+        <h1 className="font-zelda text-[100px] text-center mt-[100px]">Loading...</h1>
+      </div>
+    );
 
   return (
     <div className="flex h-screen">
