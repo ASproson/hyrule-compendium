@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import MonsterDetails from "./components/MonsterDetails";
 import Carousel from "./components/Carousel";
 import Banner from "./components/Banner";
+import MonsterDetailsMobile from "./components/MonsterDetailsMobile";
 
 const apiUrl = "https://botw-compendium.herokuapp.com/api/v2/category/monsters";
 
@@ -94,31 +95,50 @@ function App() {
     setIdx(counter);
   };
 
-  if (!data) return <p>Loading...</p>;
+  if (!data) return (
+      <div>
+        <h1 className="font-zelda text-[100px] text-center mt-[100px]">Loading...</h1>
+      </div>
+    );
 
   return (
     <div className="flex h-screen">
-      <Header />
+      <div className="hidden sm:visible sm:block">
+        <Header />
+      </div>
       <div className="m-auto">
         <div className="mt-[110px]">
-          <div
-            className="flex"
-            style={{
-              backgroundImage: `url(${slate})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
-              height: 600,
-              width: 1000,
-            }}
-          >
-            <MonsterDetails data={data} idx={idx} />
+          {/* Desktop View */}
+          <div className="hidden md:visible md:flex">
+            <div
+              className="flex"
+              style={{
+                backgroundImage: `url(${slate})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                height: 600,
+                width: 1000,
+              }}
+            >
+              <MonsterDetails data={data} idx={idx} />
 
-            <div className="absolute mt-[240px] ml-[140px] w-[800px] flex justify-between">
-              <Carousel
-                handleClickBackward={handleClickBackward}
-                handleClickForward={handleClickForward}
-              />
+              <div className="absolute mt-[240px] ml-[140px] w-[800px] flex justify-between">
+                <Carousel
+                  handleClickBackward={handleClickBackward}
+                  handleClickForward={handleClickForward}
+                />
+              </div>
             </div>
+          </div>
+
+          {/* Mobile View */}
+          <div className="md:hidden">
+            <MonsterDetailsMobile
+              data={data}
+              idx={idx}
+              handleClickBackward={handleClickBackward}
+              handleClickForward={handleClickForward}
+            />
           </div>
         </div>
       </div>
