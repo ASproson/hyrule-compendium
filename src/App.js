@@ -99,7 +99,9 @@ function App() {
 
   return (
     <div className="flex h-screen">
-      <Header />
+      <div className="hidden sm:visible sm:block">
+        <Header />
+      </div>
       <div className="m-auto">
         <div className="mt-[110px]">
           {/* Desktop View */}
