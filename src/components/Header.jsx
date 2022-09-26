@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="absolute mt-[120px] w-full left-0 right-0 ml-auto mr-auto text-center">
+    <div className="absolute mt-[50px] w-full left-0 right-0 ml-auto mr-auto text-center">
       <h1 className="font-zelda text-[50px] sm:text-[70px] lg:text-[100px]">Hyrule Compendium</h1>
       {/* <div className="-mt-[10px] w-[400px] md:w-[500px] absolute left-0 right-0 ml-auto mr-auto">
         <p className="mb-4">Welcome...</p>
