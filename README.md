@@ -16,7 +16,7 @@ To run on your local machine please follow the below instructions:
 
 > npm start
 
-If you want to run Jest testing suite:
+If you want to run the Jest testing suite:
 
 > npm test
 
