@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hyrule-compendium/static/css/main.2478138a.css",
-    "main.js": "/hyrule-compendium/static/js/main.1b95cc2d.js",
+    "main.css": "/hyrule-compendium/static/css/main.8823079c.css",
+    "main.js": "/hyrule-compendium/static/js/main.37dd7bcd.js",
     "static/media/SheikahSlateUpscale.png": "/hyrule-compendium/static/media/SheikahSlateUpscale.c5e6b26da7567ca4c2ab.png",
     "static/media/The Wild Breath of Zelda.otf": "/hyrule-compendium/static/media/The Wild Breath of Zelda.f2586a76dbe6e9c1c007.otf",
     "static/media/triforce.png": "/hyrule-compendium/static/media/triforce.32452de5ffdddb90eca7.png",
     "index.html": "/hyrule-compendium/index.html",
-    "main.2478138a.css.map": "/hyrule-compendium/static/css/main.2478138a.css.map",
-    "main.1b95cc2d.js.map": "/hyrule-compendium/static/js/main.1b95cc2d.js.map"
+    "main.8823079c.css.map": "/hyrule-compendium/static/css/main.8823079c.css.map",
+    "main.37dd7bcd.js.map": "/hyrule-compendium/static/js/main.37dd7bcd.js.map"
   },
   "entrypoints": [
-    "static/css/main.2478138a.css",
-    "static/js/main.1b95cc2d.js"
+    "static/css/main.8823079c.css",
+    "static/js/main.37dd7bcd.js"
   ]
 }
